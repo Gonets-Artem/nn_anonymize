@@ -9,7 +9,7 @@ class MinioWork:
     @staticmethod
     def minio_connection(address="localhost:9000", access_key="minioadmin", secret_key="minioadmin", secure=False):
         try:
-            return Minio(address, access_key, secret_key, secure)
+            return Minio(address, access_key=access_key, secret_key=secret_key, secure=secure)
         except Exception as e:
             print("connection:", e)
             return None
